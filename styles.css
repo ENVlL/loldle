@@ -97,7 +97,7 @@ body {
   padding-right: 4px;
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 10px;
+  gap: 12px;
 }
 
 .sidebar-loading {
@@ -244,21 +244,22 @@ h1 {
 
 .suggestions {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-  gap: 10px;
-  margin-top: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
   min-height: 10px;
 }
 
 .suggestion-item {
   width: 100%;
   text-align: left;
-  padding: 11px 14px;
+  padding: 12px 16px;
   border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(18, 35, 49, 0.88);
   color: var(--text);
   cursor: pointer;
+  line-height: 1.35;
 }
 
 .status-text {
@@ -470,6 +471,11 @@ td.state-low {
 
   #guess-btn {
     min-height: 54px;
+  }
+
+  .suggestions {
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   th,
