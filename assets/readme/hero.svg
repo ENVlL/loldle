@@ -1,0 +1,83 @@
+<svg width="1600" height="720" viewBox="0 0 1600 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Loldle de Campeones</title>
+  <desc id="desc">Banner para README de Loldle con estilo de fantasia y paneles de pista</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#081018" />
+      <stop offset="1" stop-color="#10263A" />
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1260 90) rotate(120) scale(420 560)">
+      <stop stop-color="#2EC8FF" stop-opacity="0.42" />
+      <stop offset="1" stop-color="#2EC8FF" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(280 640) rotate(-42) scale(560 440)">
+      <stop stop-color="#E7BE64" stop-opacity="0.32" />
+      <stop offset="1" stop-color="#E7BE64" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="glass" x1="100" y1="80" x2="1500" y2="640" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F1E2CA8" />
+      <stop offset="1" stop-color="#152B40CC" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#F6D57B" />
+      <stop offset="1" stop-color="#D2A54B" />
+    </linearGradient>
+    <linearGradient id="pill" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#1A344E" />
+      <stop offset="1" stop-color="#132A40" />
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" stroke="#FFFFFF" stroke-opacity="0.06" />
+    </pattern>
+    <filter id="softShadow" x="40" y="40" width="1520" height="640" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000000" flood-opacity="0.45" />
+    </filter>
+  </defs>
+
+  <rect width="1600" height="720" fill="url(#bg)" />
+  <rect width="1600" height="720" fill="url(#grid)" opacity="0.6" />
+  <rect width="1600" height="720" fill="url(#glowA)" />
+  <rect width="1600" height="720" fill="url(#glowB)" />
+
+  <g filter="url(#softShadow)">
+    <rect x="70" y="68" width="1460" height="584" rx="34" fill="url(#glass)" stroke="#E7BE6455" stroke-width="2" />
+  </g>
+
+  <text x="128" y="182" fill="#E7BE64" font-size="22" font-family="Segoe UI, Inter, Arial, sans-serif" letter-spacing="5">LEAGUE OF LEGENDS LOLDLE</text>
+  <text x="128" y="264" fill="#F5F2E8" font-size="78" font-weight="700" font-family="Segoe UI, Inter, Arial, sans-serif">Loldle de Campeones</text>
+  <text x="128" y="318" fill="#B8C6D2" font-size="30" font-family="Segoe UI, Inter, Arial, sans-serif">Adivina el campeon oculto con pistas por genero, anio, posicion, rango, recurso y region.</text>
+
+  <g transform="translate(128 372)">
+    <rect x="0" y="0" width="270" height="70" rx="35" fill="url(#pill)" stroke="#38D4FF66" />
+    <circle cx="34" cy="35" r="10" fill="#29BF62" />
+    <text x="58" y="43" fill="#F5F2E8" font-size="25" font-family="Segoe UI, Inter, Arial, sans-serif">172 campeones</text>
+
+    <rect x="288" y="0" width="214" height="70" rx="35" fill="url(#pill)" stroke="#E7BE6466" />
+    <circle cx="322" cy="35" r="10" fill="#E7BE64" />
+    <text x="346" y="43" fill="#F5F2E8" font-size="25" font-family="Segoe UI, Inter, Arial, sans-serif">Patch 16.7.1</text>
+
+    <rect x="520" y="0" width="242" height="70" rx="35" fill="url(#pill)" stroke="#8ED1FF55" />
+    <circle cx="554" cy="35" r="10" fill="#38D4FF" />
+    <text x="578" y="43" fill="#F5F2E8" font-size="25" font-family="Segoe UI, Inter, Arial, sans-serif">Vanilla JS</text>
+  </g>
+
+  <g transform="translate(980 198)">
+    <rect x="0" y="0" width="430" height="340" rx="26" fill="#0D1C2B" stroke="#E7BE6444" />
+    <text x="32" y="54" fill="#F5F2E8" font-size="30" font-weight="700" font-family="Segoe UI, Inter, Arial, sans-serif">Indicadores</text>
+
+    <rect x="32" y="84" width="366" height="62" rx="14" fill="#29BF6233" stroke="#29BF62" />
+    <text x="56" y="122" fill="#F5F2E8" font-size="24" font-family="Segoe UI, Inter, Arial, sans-serif">Exacto: el dato coincide</text>
+
+    <rect x="32" y="160" width="366" height="62" rx="14" fill="#FFB11B2E" stroke="#FFB11B" />
+    <text x="56" y="198" fill="#F5F2E8" font-size="24" font-family="Segoe UI, Inter, Arial, sans-serif">Parcial: comparte valores</text>
+
+    <rect x="32" y="236" width="172" height="62" rx="14" fill="#2D7CF533" stroke="#2D7CF5" />
+    <text x="56" y="274" fill="#F5F2E8" font-size="24" font-family="Segoe UI, Inter, Arial, sans-serif">Mas alto</text>
+
+    <rect x="226" y="236" width="172" height="62" rx="14" fill="#8B5CF633" stroke="#8B5CF6" />
+    <text x="250" y="274" fill="#F5F2E8" font-size="24" font-family="Segoe UI, Inter, Arial, sans-serif">Mas bajo</text>
+  </g>
+
+  <rect x="70" y="68" width="1460" height="584" rx="34" stroke="url(#gold)" stroke-opacity="0.45" />
+</svg>

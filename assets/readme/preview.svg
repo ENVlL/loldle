@@ -1,0 +1,119 @@
+<svg width="1600" height="920" viewBox="0 0 1600 920" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Preview de interfaz Loldle</title>
+  <desc id="desc">Mockup visual del tablero de juego y galeria de campeones</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="920" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A1621" />
+      <stop offset="1" stop-color="#0E2435" />
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#10273AAE" />
+      <stop offset="1" stop-color="#162C40CC" />
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="1600" height="920" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#000" flood-opacity="0.38" />
+    </filter>
+  </defs>
+
+  <rect width="1600" height="920" fill="url(#bg)" />
+
+  <g filter="url(#shadow)">
+    <rect x="46" y="36" width="1508" height="848" rx="24" fill="#0A1825" stroke="#E7BE6433" />
+  </g>
+
+  <rect x="46" y="36" width="1508" height="56" rx="24" fill="#0F2234" />
+  <circle cx="84" cy="64" r="8" fill="#F87171" />
+  <circle cx="110" cy="64" r="8" fill="#FBBF24" />
+  <circle cx="136" cy="64" r="8" fill="#34D399" />
+  <rect x="182" y="51" width="720" height="26" rx="13" fill="#1A3348" />
+  <text x="206" y="69" fill="#B8C6D2" font-size="14" font-family="Segoe UI, Inter, Arial, sans-serif">https://github.com/ENVlL/loldle</text>
+
+  <g transform="translate(74 120)">
+    <rect x="0" y="0" width="440" height="728" rx="22" fill="url(#panel)" stroke="#E7BE6440" />
+    <text x="24" y="40" fill="#F5F2E8" font-size="26" font-weight="700" font-family="Segoe UI, Inter, Arial, sans-serif">Campeones (172)</text>
+
+    <g transform="translate(24 64)">
+      <rect x="0" y="0" width="58" height="58" rx="12" fill="#365A74" />
+      <rect x="70" y="0" width="58" height="58" rx="12" fill="#2A4A63" />
+      <rect x="140" y="0" width="58" height="58" rx="12" fill="#4A6882" />
+      <rect x="210" y="0" width="58" height="58" rx="12" fill="#587A95" />
+      <rect x="280" y="0" width="58" height="58" rx="12" fill="#304E67" />
+      <rect x="350" y="0" width="58" height="58" rx="12" fill="#46637C" />
+
+      <rect x="0" y="72" width="58" height="58" rx="12" fill="#2D4F68" />
+      <rect x="70" y="72" width="58" height="58" rx="12" fill="#3C5E77" />
+      <rect x="140" y="72" width="58" height="58" rx="12" fill="#5A7B97" />
+      <rect x="210" y="72" width="58" height="58" rx="12" fill="#35556E" />
+      <rect x="280" y="72" width="58" height="58" rx="12" fill="#40617C" />
+      <rect x="350" y="72" width="58" height="58" rx="12" fill="#2B4B63" />
+
+      <rect x="0" y="144" width="58" height="58" rx="12" fill="#3B5B74" />
+      <rect x="70" y="144" width="58" height="58" rx="12" fill="#4F708B" />
+      <rect x="140" y="144" width="58" height="58" rx="12" fill="#2F4F67" />
+      <rect x="210" y="144" width="58" height="58" rx="12" fill="#385872" />
+      <rect x="280" y="144" width="58" height="58" rx="12" fill="#5C7E99" />
+      <rect x="350" y="144" width="58" height="58" rx="12" fill="#456780" />
+    </g>
+
+    <rect x="24" y="298" width="392" height="2" fill="#E7BE6430" />
+
+    <text x="24" y="340" fill="#B8C6D2" font-size="20" font-family="Segoe UI, Inter, Arial, sans-serif">Doble clic en retrato para intentar</text>
+    <text x="24" y="372" fill="#95A8B8" font-size="16" font-family="Segoe UI, Inter, Arial, sans-serif">Los campeones probados desaparecen de la galeria</text>
+
+    <rect x="24" y="404" width="392" height="300" rx="16" fill="#11273A" stroke="#38D4FF44" />
+    <text x="44" y="444" fill="#F5F2E8" font-size="22" font-family="Segoe UI, Inter, Arial, sans-serif">Indicadores</text>
+    <rect x="44" y="464" width="352" height="48" rx="10" fill="#29BF6233" stroke="#29BF62" />
+    <text x="60" y="494" fill="#F5F2E8" font-size="19" font-family="Segoe UI, Inter, Arial, sans-serif">Exacto</text>
+    <rect x="44" y="524" width="352" height="48" rx="10" fill="#FFB11B33" stroke="#FFB11B" />
+    <text x="60" y="554" fill="#F5F2E8" font-size="19" font-family="Segoe UI, Inter, Arial, sans-serif">Parcial</text>
+    <rect x="44" y="584" width="170" height="48" rx="10" fill="#2D7CF533" stroke="#2D7CF5" />
+    <text x="60" y="614" fill="#F5F2E8" font-size="19" font-family="Segoe UI, Inter, Arial, sans-serif">Mas alto</text>
+    <rect x="226" y="584" width="170" height="48" rx="10" fill="#8B5CF633" stroke="#8B5CF6" />
+    <text x="242" y="614" fill="#F5F2E8" font-size="19" font-family="Segoe UI, Inter, Arial, sans-serif">Mas bajo</text>
+  </g>
+
+  <g transform="translate(544 120)">
+    <rect x="0" y="0" width="980" height="728" rx="22" fill="url(#panel)" stroke="#E7BE6440" />
+
+    <text x="36" y="56" fill="#E7BE64" font-size="18" letter-spacing="4" font-family="Segoe UI, Inter, Arial, sans-serif">LEAGUE OF LEGENDS LOLDLE</text>
+    <text x="36" y="106" fill="#F5F2E8" font-size="52" font-weight="700" font-family="Segoe UI, Inter, Arial, sans-serif">Adivina el campeon oculto</text>
+
+    <rect x="36" y="132" width="710" height="56" rx="14" fill="#0E2131" stroke="#38D4FF44" />
+    <text x="58" y="168" fill="#B8C6D2" font-size="22" font-family="Segoe UI, Inter, Arial, sans-serif">Escribe el nombre del campeon...</text>
+    <rect x="760" y="132" width="184" height="56" rx="14" fill="#E7BE64" />
+    <text x="820" y="168" fill="#122435" font-size="24" font-weight="700" font-family="Segoe UI, Inter, Arial, sans-serif">Probar</text>
+
+    <rect x="36" y="214" width="908" height="478" rx="18" fill="#0F2234" stroke="#E7BE6430" />
+    <text x="60" y="252" fill="#F5F2E8" font-size="28" font-family="Segoe UI, Inter, Arial, sans-serif">Intentos</text>
+
+    <g transform="translate(60 278)">
+      <rect x="0" y="0" width="876" height="62" rx="12" fill="#1A3044" />
+      <text x="18" y="39" fill="#CFE0EC" font-size="18" font-family="Segoe UI, Inter, Arial, sans-serif">Campeon</text>
+      <text x="202" y="39" fill="#CFE0EC" font-size="18" font-family="Segoe UI, Inter, Arial, sans-serif">Genero</text>
+      <text x="318" y="39" fill="#CFE0EC" font-size="18" font-family="Segoe UI, Inter, Arial, sans-serif">Anio</text>
+      <text x="402" y="39" fill="#CFE0EC" font-size="18" font-family="Segoe UI, Inter, Arial, sans-serif">Posicion</text>
+      <text x="566" y="39" fill="#CFE0EC" font-size="18" font-family="Segoe UI, Inter, Arial, sans-serif">Rango</text>
+      <text x="660" y="39" fill="#CFE0EC" font-size="18" font-family="Segoe UI, Inter, Arial, sans-serif">Recurso</text>
+      <text x="772" y="39" fill="#CFE0EC" font-size="18" font-family="Segoe UI, Inter, Arial, sans-serif">Region</text>
+
+      <rect x="0" y="76" width="876" height="74" rx="12" fill="#142A3E" />
+      <rect x="190" y="88" width="106" height="50" rx="10" fill="#29BF6233" stroke="#29BF62" />
+      <rect x="306" y="88" width="84" height="50" rx="10" fill="#2D7CF533" stroke="#2D7CF5" />
+      <rect x="398" y="88" width="156" height="50" rx="10" fill="#FFB11B33" stroke="#FFB11B" />
+      <rect x="564" y="88" width="86" height="50" rx="10" fill="#C7363133" stroke="#C73631" />
+      <rect x="658" y="88" width="104" height="50" rx="10" fill="#C7363133" stroke="#C73631" />
+      <rect x="770" y="88" width="96" height="50" rx="10" fill="#FFB11B33" stroke="#FFB11B" />
+      <text x="18" y="119" fill="#F5F2E8" font-size="18" font-family="Segoe UI, Inter, Arial, sans-serif">Aatrox</text>
+
+      <rect x="0" y="164" width="876" height="74" rx="12" fill="#142A3E" />
+      <rect x="190" y="176" width="106" height="50" rx="10" fill="#C7363133" stroke="#C73631" />
+      <rect x="306" y="176" width="84" height="50" rx="10" fill="#8B5CF633" stroke="#8B5CF6" />
+      <rect x="398" y="176" width="156" height="50" rx="10" fill="#29BF6233" stroke="#29BF62" />
+      <rect x="564" y="176" width="86" height="50" rx="10" fill="#29BF6233" stroke="#29BF62" />
+      <rect x="658" y="176" width="104" height="50" rx="10" fill="#29BF6233" stroke="#29BF62" />
+      <rect x="770" y="176" width="96" height="50" rx="10" fill="#29BF6233" stroke="#29BF62" />
+      <text x="18" y="207" fill="#F5F2E8" font-size="18" font-family="Segoe UI, Inter, Arial, sans-serif">Shen</text>
+    </g>
+  </g>
+</svg>

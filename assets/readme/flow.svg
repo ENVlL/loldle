@@ -1,0 +1,43 @@
+<svg width="1600" height="420" viewBox="0 0 1600 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Flujo de juego</title>
+  <desc id="desc">Diagrama de tres pasos para jugar al Loldle de campeones</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1724" />
+      <stop offset="1" stop-color="#10263A" />
+    </linearGradient>
+    <linearGradient id="line" x1="190" y1="0" x2="1410" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38D4FF" />
+      <stop offset="1" stop-color="#E7BE64" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="420" rx="22" fill="url(#bg)" stroke="#E7BE6433" />
+
+  <path d="M286 210H1320" stroke="url(#line)" stroke-width="8" stroke-linecap="round" stroke-dasharray="16 16" />
+
+  <g transform="translate(120 72)">
+    <circle cx="90" cy="138" r="86" fill="#112B41" stroke="#38D4FF" stroke-width="4" />
+    <circle cx="90" cy="138" r="28" fill="#38D4FF" fill-opacity="0.22" stroke="#38D4FF" />
+    <text x="84" y="146" fill="#E7F9FF" font-size="28" font-weight="700" font-family="Segoe UI, Inter, Arial, sans-serif">1</text>
+    <text x="0" y="278" fill="#F5F2E8" font-size="34" font-weight="700" font-family="Segoe UI, Inter, Arial, sans-serif">Escribe un campeon</text>
+    <text x="0" y="316" fill="#B8C6D2" font-size="22" font-family="Segoe UI, Inter, Arial, sans-serif">Usa el input con autocompletado y sugerencias.</text>
+  </g>
+
+  <g transform="translate(620 72)">
+    <circle cx="90" cy="138" r="86" fill="#2A2314" stroke="#E7BE64" stroke-width="4" />
+    <circle cx="90" cy="138" r="28" fill="#E7BE64" fill-opacity="0.22" stroke="#E7BE64" />
+    <text x="83" y="146" fill="#FFF7E2" font-size="28" font-weight="700" font-family="Segoe UI, Inter, Arial, sans-serif">2</text>
+    <text x="0" y="278" fill="#F5F2E8" font-size="34" font-weight="700" font-family="Segoe UI, Inter, Arial, sans-serif">Lee las pistas</text>
+    <text x="0" y="316" fill="#B8C6D2" font-size="22" font-family="Segoe UI, Inter, Arial, sans-serif">Compara colores y ajusta tu siguiente intento.</text>
+  </g>
+
+  <g transform="translate(1120 72)">
+    <circle cx="90" cy="138" r="86" fill="#1D2D1E" stroke="#29BF62" stroke-width="4" />
+    <circle cx="90" cy="138" r="28" fill="#29BF62" fill-opacity="0.22" stroke="#29BF62" />
+    <text x="83" y="146" fill="#E6FFE9" font-size="28" font-weight="700" font-family="Segoe UI, Inter, Arial, sans-serif">3</text>
+    <text x="0" y="278" fill="#F5F2E8" font-size="34" font-weight="700" font-family="Segoe UI, Inter, Arial, sans-serif">Acierta y reinicia</text>
+    <text x="0" y="316" fill="#B8C6D2" font-size="22" font-family="Segoe UI, Inter, Arial, sans-serif">Gana y empieza una nueva partida al instante.</text>
+  </g>
+</svg>
