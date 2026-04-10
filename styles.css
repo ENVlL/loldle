@@ -322,13 +322,14 @@ h1 {
 }
 
 .table-wrap {
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 
 table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 8px 10px;
+  table-layout: fixed;
 }
 
 th {
@@ -339,11 +340,22 @@ th {
 }
 
 td {
-  padding: 14px 12px;
+  padding: 12px 10px;
   border-radius: 14px;
   background: rgba(10, 19, 29, 0.94);
   border: 1px solid rgba(255, 255, 255, 0.07);
-  min-width: 145px;
+  min-width: 0;
+  vertical-align: top;
+}
+
+th:first-child,
+td:first-child {
+  width: 24%;
+}
+
+th:not(:first-child),
+td:not(:first-child) {
+  width: calc(76% / 6);
 }
 
 td.state-exact {
@@ -374,37 +386,42 @@ td.state-low {
 .champion-cell {
   display: flex;
   align-items: center;
-  gap: 12px;
-  min-width: 210px;
+  gap: 10px;
+  min-width: 0;
 }
 
 .champion-cell img {
-  width: 54px;
-  height: 54px;
+  width: 46px;
+  height: 46px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
 }
 
 .champion-name {
   font-weight: 700;
+  overflow-wrap: anywhere;
 }
 
 .champion-id {
   color: var(--muted);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+  overflow-wrap: anywhere;
 }
 
 .cell-main {
   display: block;
   font-weight: 700;
+  overflow-wrap: anywhere;
 }
 
 .cell-sub {
   display: block;
   color: var(--muted);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   margin-top: 2px;
+  overflow-wrap: anywhere;
 }
 
 .winner-banner {
