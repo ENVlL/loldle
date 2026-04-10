@@ -1,0 +1,479 @@
+:root {
+  --bg: #07131d;
+  --panel: rgba(9, 22, 33, 0.84);
+  --panel-strong: rgba(14, 30, 44, 0.92);
+  --line: rgba(225, 188, 102, 0.35);
+  --gold: #e7be64;
+  --gold-strong: #f5d06c;
+  --cyan: #38d4ff;
+  --text: #f5f2e8;
+  --muted: #b8c6d2;
+  --exact: #29bf62;
+  --partial: #ffb11b;
+  --wrong: #c73631;
+  --high: #2d7cf5;
+  --low: #8b5cf6;
+  --shadow: 0 18px 42px rgba(0, 0, 0, 0.32);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  background:
+    linear-gradient(180deg, rgba(2, 7, 13, 0.18), rgba(2, 7, 13, 0.88)),
+    radial-gradient(circle at top, rgba(61, 112, 143, 0.18), transparent 40%),
+    url("https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lux_0.jpg") center/cover fixed;
+}
+
+.page-shell {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(120deg, rgba(0, 0, 0, 0.35), transparent 35%, rgba(0, 0, 0, 0.45)),
+    radial-gradient(circle at 20% 20%, rgba(56, 212, 255, 0.08), transparent 28%),
+    radial-gradient(circle at 80% 10%, rgba(231, 190, 100, 0.12), transparent 24%);
+}
+
+.app-layout {
+  position: relative;
+  width: calc(100% - 32px);
+  margin: 0 auto;
+  padding: 28px 0 40px;
+  display: grid;
+  grid-template-columns: minmax(420px, 1fr) minmax(0, 1080px);
+  gap: 20px;
+  align-items: start;
+}
+
+.app {
+  position: relative;
+  width: 100%;
+}
+
+.hero,
+.guess-panel,
+.legend-card,
+.board-card,
+.champions-sidebar {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+}
+
+.champions-sidebar {
+  position: sticky;
+  top: 14px;
+  max-height: calc(100vh - 28px);
+  padding: 18px 16px;
+}
+
+.champions-sidebar h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px;
+  font-size: 1.2rem;
+}
+
+.remaining-count {
+  font-size: 0.95rem;
+  color: var(--gold-strong);
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+}
+
+.champions-gallery {
+  max-height: calc(100vh - 104px);
+  overflow-y: auto;
+  padding-right: 4px;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.sidebar-loading {
+  margin: 0;
+  color: var(--muted);
+}
+
+.champion-thumb {
+  margin: 0;
+}
+
+.champion-thumb img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.champion-thumb figcaption {
+  margin-top: 6px;
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.2;
+}
+
+.hero {
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.eyebrow,
+.patch-badge {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.76rem;
+}
+
+.eyebrow {
+  color: var(--gold-strong);
+  margin: 0 0 10px;
+}
+
+h1,
+h2,
+th {
+  font-family: "Cinzel", serif;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.05;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin: 14px 0 0;
+  max-width: 750px;
+  font-size: 1rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-top: 22px;
+}
+
+.secondary-btn,
+#guess-btn,
+.suggestion-item {
+  font: inherit;
+}
+
+.secondary-btn,
+#guess-btn {
+  border: 0;
+  cursor: pointer;
+  transition: transform 0.16s ease, filter 0.16s ease, box-shadow 0.16s ease;
+}
+
+.secondary-btn:hover,
+#guess-btn:hover,
+.suggestion-item:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.secondary-btn {
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(231, 190, 100, 0.2), rgba(56, 212, 255, 0.16));
+  border: 1px solid rgba(231, 190, 100, 0.45);
+  color: var(--text);
+}
+
+.patch-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 14px;
+  border-radius: 999px;
+  color: var(--gold-strong);
+  background: rgba(11, 21, 30, 0.85);
+  border: 1px solid rgba(231, 190, 100, 0.24);
+}
+
+.guess-panel {
+  padding: 22px;
+  margin-bottom: 20px;
+}
+
+.input-stack {
+  display: grid;
+  grid-template-columns: 1fr 140px;
+  gap: 12px;
+}
+
+#champion-input {
+  width: 100%;
+  border: 1px solid rgba(56, 212, 255, 0.35);
+  border-radius: 18px;
+  background: rgba(7, 19, 29, 0.92);
+  color: var(--text);
+  padding: 18px 20px;
+  font-size: 1rem;
+  outline: none;
+}
+
+#champion-input:focus {
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 4px rgba(56, 212, 255, 0.14);
+}
+
+#guess-btn {
+  border-radius: 18px;
+  background: linear-gradient(135deg, #f7d572, #b88b29);
+  color: #152231;
+  font-weight: 700;
+}
+
+.suggestions {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+  min-height: 10px;
+}
+
+.suggestion-item {
+  width: 100%;
+  text-align: left;
+  padding: 11px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(18, 35, 49, 0.88);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.status-text {
+  margin: 16px 2px 0;
+  color: var(--muted);
+}
+
+.legend-card {
+  padding: 20px 22px;
+  margin-bottom: 20px;
+}
+
+.legend-card h2,
+.board-header h2 {
+  margin: 0 0 14px;
+  font-size: 1.25rem;
+}
+
+.legend-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+}
+
+.legend-swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.exact { background: var(--exact); }
+.partial { background: var(--partial); }
+.wrong { background: var(--wrong); }
+.high { background: var(--high); }
+.low { background: var(--low); }
+
+.board-card {
+  padding: 22px;
+}
+
+.board-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+#attempt-counter {
+  color: var(--gold-strong);
+  font-weight: 600;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+th {
+  text-align: left;
+  color: var(--gold-strong);
+  font-size: 0.95rem;
+  padding: 0 8px 4px;
+}
+
+td {
+  padding: 14px 12px;
+  border-radius: 14px;
+  background: rgba(10, 19, 29, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  min-width: 145px;
+}
+
+td.state-exact {
+  background: rgba(41, 191, 98, 0.2);
+  border-color: rgba(41, 191, 98, 0.42);
+}
+
+td.state-partial {
+  background: rgba(255, 177, 27, 0.2);
+  border-color: rgba(255, 177, 27, 0.4);
+}
+
+td.state-wrong {
+  background: rgba(199, 54, 49, 0.18);
+  border-color: rgba(199, 54, 49, 0.36);
+}
+
+td.state-high {
+  background: rgba(45, 124, 245, 0.16);
+  border-color: rgba(45, 124, 245, 0.32);
+}
+
+td.state-low {
+  background: rgba(139, 92, 246, 0.16);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.champion-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 210px;
+}
+
+.champion-cell img {
+  width: 54px;
+  height: 54px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.champion-name {
+  font-weight: 700;
+}
+
+.champion-id {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.cell-main {
+  display: block;
+  font-weight: 700;
+}
+
+.cell-sub {
+  display: block;
+  color: var(--muted);
+  font-size: 0.82rem;
+  margin-top: 2px;
+}
+
+.winner-banner {
+  color: #93fcb8;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@media (max-width: 1040px) {
+  .app-layout {
+    width: min(100% - 22px, 100%);
+    grid-template-columns: 300px minmax(0, 1fr);
+    gap: 14px;
+    padding: 18px 0 28px;
+  }
+
+  .champions-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .app-layout {
+    width: min(100% - 18px, 100%);
+    padding: 16px 0 24px;
+    grid-template-columns: 1fr;
+  }
+
+  .champions-sidebar {
+    position: static;
+    max-height: none;
+    padding: 16px;
+  }
+
+  .champions-gallery {
+    max-height: none;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  }
+
+  .hero,
+  .guess-panel,
+  .legend-card,
+  .board-card,
+  .champions-sidebar {
+    border-radius: 20px;
+  }
+
+  .hero {
+    padding: 24px 18px;
+  }
+
+  .input-stack {
+    grid-template-columns: 1fr;
+  }
+
+  #guess-btn {
+    min-height: 54px;
+  }
+
+  th,
+  td {
+    font-size: 0.92rem;
+  }
+}

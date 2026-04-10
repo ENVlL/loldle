@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loldle de Campeones</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell"></div>
+  <div class="app-layout">
+    <aside class="champions-sidebar" aria-label="Galeria de campeones">
+      <h2>Campeones <span id="remaining-count" class="remaining-count">0</span></h2>
+      <div id="champions-gallery" class="champions-gallery" aria-live="polite">
+        <p class="sidebar-loading">Cargando retratos...</p>
+      </div>
+    </aside>
+
+    <main class="app">
+      <section class="hero">
+        <p class="eyebrow">League of Legends Loldle</p>
+        <h1>Adivina el campe&oacute;n oculto</h1>
+        <p class="subtitle">
+          Se elige un campe&oacute;n aleatorio al empezar. Escribe nombres, usa las sugerencias y descubre cu&aacute;l es con las pistas.
+        </p>
+        <div class="hero-actions">
+          <button id="new-game-btn" class="secondary-btn" type="button">Nueva partida</button>
+          <span id="patch-badge" class="patch-badge">Cargando datos...</span>
+        </div>
+      </section>
+
+      <section class="guess-panel">
+        <div class="input-stack">
+          <label class="sr-only" for="champion-input">Nombre del campe&oacute;n</label>
+          <input id="champion-input" type="text" autocomplete="off" placeholder="Escribe el nombre del campe&oacute;n">
+          <button id="guess-btn" type="button">Probar</button>
+        </div>
+        <div id="suggestions" class="suggestions" aria-live="polite"></div>
+        <p id="status-text" class="status-text">Cargando campeones...</p>
+      </section>
+
+      <section class="legend-card">
+        <h2>Indicadores</h2>
+        <div class="legend-grid">
+          <div class="legend-item"><span class="legend-swatch exact"></span><span>Correcto</span></div>
+          <div class="legend-item"><span class="legend-swatch partial"></span><span>Parcial</span></div>
+          <div class="legend-item"><span class="legend-swatch wrong"></span><span>Incorrecto</span></div>
+          <div class="legend-item"><span class="legend-swatch high"></span><span>M&aacute;s alto</span></div>
+          <div class="legend-item"><span class="legend-swatch low"></span><span>M&aacute;s bajo</span></div>
+        </div>
+      </section>
+
+      <section class="board-card">
+        <div class="board-header">
+          <h2>Intentos</h2>
+          <span id="attempt-counter">0 intentos</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Campe&oacute;n</th>
+                <th>G&eacute;nero</th>
+                <th>A&ntilde;o</th>
+                <th>Posici&oacute;n</th>
+                <th>Rango</th>
+                <th>Recurso</th>
+                <th>Regi&oacute;n</th>
+              </tr>
+            </thead>
+            <tbody id="attempts-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <template id="suggestion-template">
+    <button class="suggestion-item" type="button"></button>
+  </template>
+
+  <script src="champions-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
